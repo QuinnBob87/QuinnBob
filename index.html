@@ -42,6 +42,16 @@ Ryan and I translated our scoring system into the python code, so it can run. Th
   file full of connect 4 games. Originally the csv files had the games saved so each game was one column with 42 rows to represent the game state. It is now a 3d list. The first dimension is each game. 
   The next dimension is the rows, and the third dimension is the column. We are now ready to implement the machine learning part of this project.
 
+  <h1>Blog Post #5</h1><p>
+ <p>This week I updated how our code finds the best move. Prior to now, the code would run all possible moves, then choose the one that gives the best score. My goal
+  is to have it see all possible moves, followed by the opponents best move, followed by the best move. Before working on code I drew my ideas down to understand the logic needed.
+  <p><img src='IMG_1826.jpg' style="width:500px;height:600px;">
+<p> In this picture the top drawing represents a connect 4 board with 1 theoretical piece in. The middle drawing also has 1 theoretical opponent piece. The bottom drawing has another
+ theoretical piece in. The list on the bottom represents the possible scores of the bottom drawing, where the first moves are shared. I will be taking in the highest score and
+ bringing that into another list. The middle list represents the possible scores that were brought in from the previous interaction. This time we will take in the lowest score, since this will be the opponents best move.
+ Finally we will take in a list of all the best moves after the opponent made their best move. The list on the top row represents this. We will take in the highest score from this and the column.
+ Now we have the move that could get us closer to a winning game.
+ 
  </body>
 </html>
 
